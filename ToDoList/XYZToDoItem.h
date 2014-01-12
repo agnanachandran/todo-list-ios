@@ -11,7 +11,7 @@
 @interface XYZToDoItem : NSObject
 
 @property NSString *itemName;
-@property BOOL completed;
-@property NSDate *creationDate;
-
+@property (getter=isCompleted)BOOL completed;
+@property (readonly) NSDate *creationDate;
+- (void)markAsCompleted:(BOOL)isComplete;
 @end
